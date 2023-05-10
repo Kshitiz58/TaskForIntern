@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+</head>
+<body>
+	<div th:insert="header.html"></div>
+	<hr>
+	<h2>Date and Time: <p id="p1"></p></h2>
+	<script>
+		var date = new Date();
+		var current_date = date.getFullYear() + "-" + (date.getMonth() + 1)
+				+ "-" + date.getDate();
+		var current_time = date.getHours() + ":" + date.getMinutes() + ":"
+				+ date.getSeconds();
+		var date_time = current_date + " " + current_time;
+		document.getElementById("p1").innerHTML = date_time;
+	</script>
+</body>
+</html>
